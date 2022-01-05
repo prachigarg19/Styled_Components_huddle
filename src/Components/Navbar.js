@@ -6,7 +6,7 @@ export default function Navbar() {
     return (
         <Navbarstyled>
             <img src={logo} alt="logo"></img>
-            <Buttoncom text="Try It Free" bg="#fff"/>
+            <Buttoncom text="Try It Free" bg="#fff"padding="0 3rem" box="0 0 10rem gray"/>
         </Navbarstyled>
     );
 }
