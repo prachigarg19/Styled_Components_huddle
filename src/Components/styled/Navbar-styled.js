@@ -6,11 +6,14 @@ export const Navbarstyled=styled.div `
  justify-content:space-between;
  padding-top:2rem;
  background-color:${({theme})=>theme.colors.header};
+ 
 
  @media (max-width:${({theme})=>theme.mobile.query})
     {flex-direction:column; 
     align-items:center;
     gap:2rem;
+    padding:2rem 2.5rem;
+    width:100vw;
     }         
 `
 

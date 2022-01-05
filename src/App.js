@@ -9,6 +9,7 @@ import Buttoncom from './Components/Buttoncom';
 import { Image } from './Components/styled/Image';
 import { content} from './Boxcontent.js'
 import Card from './Components/Card';
+import Footer from './Components/Footer';
 const theme={
  
   colors:{
@@ -31,22 +32,24 @@ function App() {
   // }
   return (
    <>
-   <ThemeProvider theme={theme}>
+   <ThemeProvider theme={theme} style="margin:0;padding:0; width:100vw;">
       <Navbar/>
-      <Flex>
+      <Flex color={({theme})=>theme.colors.header}>
         <Content> 
           {/* content is row flex */}
             <h1>Build The Community Your Fans Will Love</h1>
             <p>Huddle reimagines the way we build communitites. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussions. </p>
             <Buttoncom bg={theme.colors.pinkbutton} text="Get Started For Free" color="white" padding="1rem 3rem" box="0"/>
         </Content>
-        <Image src={`./images/illustration-mockups.svg`} alt="chatbox-images"/>
-
+        <div>
+        <img src={require("./images/illustration-mockups.png")} width="60%"/>
+        </div>
       </Flex>
       {content.map((item)=>(
           <Card id={item.id} title={item.title} body={item.body} image={item.image}/> 
       ))}
       {/* */}
+      <Footer/>
     </ThemeProvider>
    </>
   );
